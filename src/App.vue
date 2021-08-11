@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import projectA from './data';
+import { projectA, projectB } from './data';
 import FlexBox from './components/FlexBox.vue'
 import GridBox from './components/GridBox.vue';
 
@@ -22,7 +22,7 @@ export default {
   data:() => ({
     num: 100,
     projectA,
-    projectB: projectA,
+    projectB,
   })
 }
 </script>
