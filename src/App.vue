@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    <h1>From CodePen origin work: FlexBox vs Grid</h1>
-    <h2>🔊It relates my work on <a href="https://qjw.turingtopia.com/community">QJW</a></h2>
-    <flex-box></flex-box>
-    <grid-box></grid-box>
+    <h1></h1>
+    <h1>Cards for capturing recent work projects</h1>
+    <p>🔊 From CodePen origin work: FlexBox vs Grid</p>
+    <flex-box :project-info="projectA"></flex-box>
+    <grid-box :project-info="projectB"></grid-box>
   </div>
 </template>
 
 <script>
+import projectA from './data';
 import FlexBox from './components/FlexBox.vue'
 import GridBox from './components/GridBox.vue';
 
@@ -16,7 +18,12 @@ export default {
   components: {
     FlexBox,
     GridBox,
-  }
+  },
+  data:() => ({
+    num: 100,
+    projectA,
+    projectB: projectA,
+  })
 }
 </script>
 
@@ -51,14 +58,14 @@ body {
   outline: 1px solid;
   display: flex;
   flex-direction: row;
-  width: 30rem;
+  width: 60rem;
   padding: 1rem 1rem 0;
   background: #111821;
   color: white;
 }
 
 .tweet2 {
-  width: 30rem;
+  width: 60rem;
   display: grid;
   grid-template-columns: 5rem auto;
   grid-column-gap: 1rem;
@@ -129,6 +136,7 @@ body {
   appearance: none;
   border: none;
   background: none;
+  color: white,
 }
 
 .tweet-name {

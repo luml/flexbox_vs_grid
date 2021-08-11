@@ -3,15 +3,14 @@
   <div class="tweet2">
     <figure class="tweet-avatar">Grid</figure>
     <div class="tweet-header">
-      <div class="tweet-name">David K. 🎹</div>
-      <div class="tweet-username">@davidkpiano</div>
-      <time>4m</time>
+      <div class="tweet-name">{{ projectInfo.name }}</div>
+      <div class="tweet-username">{{ projectInfo.author }}</div>
+      <time>{{ projectInfo.duration }}</time>
       <div class="tweet-options">...</div>
     </div>
 
     <p class="tweet-content">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia obcaecati
-      aliquam cupiditate ad tempore? Dolor iste at eaque.
+      {{ projectInfo.desc }}
     </p>
     <div class="tweet-actions">
       <button class="tweet-action">💬</button>
@@ -23,7 +22,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'GridBox',
+  props: {
+    projectInfo: {
+      type: Object,
+      require: true
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped></style>

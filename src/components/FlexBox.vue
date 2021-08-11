@@ -5,22 +5,21 @@
     <div class="tweet-main">
       <div class="tweet-header">
         <div class="tweet-title">
-          <div class="tweet-name">David K. 🎹</div>
-          <div class="tweet-username">@davidkpiano</div>
-          <time>4m</time>
+          <div class="tweet-name">{{ projectInfo.name }}</div>
+          <div class="tweet-username">{{ projectInfo.author }}</div>
+          <time>{{ projectInfo.duration }}</time>
         </div>
         <div class="tweet-options">...</div>
       </div>
       <div class="tweet-body">
         <p class="tweet-content">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-          obcaecati aliquam cupiditate ad tempore? Dolor iste at eaque.
+          {{ projectInfo.desc }}
         </p>
         <div class="tweet-actions">
           <button class="tweet-action">💬</button>
-          <button class="tweet-action">🔃</button>
-          <button class="tweet-action">❤️ 12</button>
-          <button class="tweet-action">📤</button>
+          <button class="tweet-action">🔃{{ projectInfo.framework }}</button>
+          <button class="tweet-action">❤️ {{ projectInfo.duration }}</button>
+          <button class="tweet-action">📤{{ projectInfo.score }}</button>
         </div>
       </div>
     </div>
@@ -28,7 +27,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'FlexBox',
+  props: {
+    projectInfo: {
+      type: Object,
+      require: true,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
