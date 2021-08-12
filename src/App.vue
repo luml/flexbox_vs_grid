@@ -162,7 +162,12 @@ body {
   appearance: none;
   border: none;
   background: none;
-  color: white,
+}
+.tweet .tweet-action {
+  color: beige;
+}
+.tweet2 .tweet-action {
+  color: darkgray;
 }
 
 .tweet-name {

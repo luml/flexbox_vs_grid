@@ -4,7 +4,8 @@ const projectA = {
   duration: '3 months',
   author: 'James',
   desc: 'A projec built on Vue.js and has amazing charts coded with apache echart libary',
-  score: 85
+  score: 85,
+  flexibility: 'Nighttime',
 }
 const projectB = {
   name: 'Cockpit',
@@ -12,7 +13,8 @@ const projectB = {
   duration: '1 months',
   author: 'James',
   desc: 'A projec built on Vue.js and has amazing charts coded with apache echart libary',
-  score: 7
+  score: 79,
+  flexibility: 'Daytime',
 }
 
 export { 

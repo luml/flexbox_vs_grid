@@ -13,10 +13,10 @@
       {{ projectInfo.desc }}
     </p>
     <div class="tweet-actions">
-      <button class="tweet-action">💬</button>
-      <button class="tweet-action">🔃</button>
-      <button class="tweet-action">❤️ 12</button>
-      <button class="tweet-action">📤</button>
+      <button class="tweet-action">💬{{ projectInfo.flexibility }}</button>
+      <button class="tweet-action">🔃{{ projectInfo.framework }}</button>
+      <button class="tweet-action">❤️ {{ projectInfo.duration }}</button>
+      <button class="tweet-action">📤 {{ projectInfo.score }}</button>
     </div>
   </div>
 </template>
