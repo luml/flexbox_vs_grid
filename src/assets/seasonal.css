@@ -1,0 +1,41 @@
+/* Seasonal.css by James Stanley
+   https://seasonal-css.incoherency.co.uk/ */
+:root {
+    --seasonal-bg: hsl(50.322580645161295,23.258064516129036%,96%);
+    --seasonal-bgdark: hsl(50.322580645161295,23.258064516129036%,90%);
+    --seasonal-fg: hsl(50.322580645161295,23.258064516129036%,30%);
+    --seasonal-hl: hsl(35.322580645161295,43.064516129032256%,50%);
+    --seasonal-hldark: hsl(35.322580645161295,43.064516129032256%,35%);
+}
+
+body {
+    background-color: var(--seasonal-bg);
+    color: var(--seasonal-fg);
+}
+a {
+    color: var(--seasonal-fg);
+    text-decoration: none;
+    border-bottom: 2px solid var(--seasonal-hl);
+}
+a:hover, a:focus {
+    color: var(--seasonal-hl);
+    text-decoration: none;
+    border-bottom: 2px solid var(--seasonal-hl);
+}
+hr {
+    border-top: 1px solid var(--seasonal-hl);
+}
+
+.darkbg {
+    background-color: var(--seasonal-bgdark);
+}
+
+.nav a {
+    color: var(--seasonal-hldark);
+    text-decoration: none;
+    border: none;
+}
+.nav a:hover {
+    color: var(--seasonal-hl);
+    text-decoration: none;
+}

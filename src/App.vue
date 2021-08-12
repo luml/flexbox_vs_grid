@@ -1,10 +1,25 @@
 <template>
   <div id="app">
-    <h1></h1>
+    <div class="modules">
+      <div class="module-item">
+        <grid-box :projectInfo="projectB"></grid-box>
+      </div>
+      <div class="module-item">
+        <flex-box :project-info="projectA"></flex-box>
+      </div>
+      <div class="module-item">
+        <grid-box :project-info="projectB"></grid-box>
+      </div>
+      <div class="module-item">
+        <flex-box :projectInfo="projectA"></flex-box>
+      </div>
+      <div class="module-item">
+        <grid-box :project-info="projectB"></grid-box>
+      </div>
+    </div>
+    <!-- <h1></h1>
     <h1>Cards for capturing recent work projects</h1>
-    <p>🔊 From CodePen origin work: FlexBox vs Grid</p>
-    <flex-box :project-info="projectA"></flex-box>
-    <grid-box :project-info="projectB"></grid-box>
+    <p>🔊 From CodePen origin work: FlexBox vs Grid</p> -->
   </div>
 </template>
 
@@ -23,7 +38,16 @@ export default {
     num: 100,
     projectA,
     projectB,
-  })
+  }),
+  created() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+    window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+    });
+  }
 }
 </script>
 
@@ -58,14 +82,16 @@ body {
   outline: 1px solid;
   display: flex;
   flex-direction: row;
-  width: 60rem;
+  width: fit-content;
+  min-width: 40rem;
   padding: 1rem 1rem 0;
   background: #111821;
   color: white;
 }
 
 .tweet2 {
-  width: 60rem;
+  width: fit-content;
+  min-width: 40rem;
   display: grid;
   grid-template-columns: 5rem auto;
   grid-column-gap: 1rem;
@@ -146,4 +172,8 @@ body {
 .tweet-content {
   margin: 0.25rem 0;
 }
+</style>
+<style lang="scss">
+@import url('./assets/style.css');
+@import url('./assets/seasonal.css');
 </style>

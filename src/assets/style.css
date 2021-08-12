@@ -1,0 +1,27 @@
+body {
+  background-color: var(--seasonal-bg);
+}
+
+.modules {
+  height: 100vh;
+
+  height: calc(var(--vh, 1vh) * 100);
+  margin: 0 auto;
+  max-width: 30%;
+}
+
+.module-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+}
+
+/* .module-item:nth-child(odd) {
+  background: var(--seasonal-hldark);
+  color:  var(--seasonal-bgdark);
+}
+.module-item:nth-child(even) {
+  background: var(--seasonal-bgdark);
+  color: var(--seasonal-hldark);
+} */
